@@ -13,7 +13,7 @@ jobs:
       run: |
         mkdir dist
         docker build -t alpine:pv .
-        docker run --rm -v $(pwd):/workdir alpine:pv cp -r /pv-static-musl/dist/. /workdir/dist
+        docker run --rm -v $(pwd):/workdir alpine:pv cp -r /pv-static-musl/dist/pv /workdir/dist/pv-x86_64
 
     - name: Set permissions for dist directory
       run: |
